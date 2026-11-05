@@ -70,5 +70,5 @@ This portfolio demonstrates foundational concepts in distributed database archit
 
 ## 9. Evidence
 
-Practical screenshots and query results are stored in the folder.
+Screenshots of practical implementations, SQL queries, and execution results are included in this portfolio directory.
 
