@@ -29,3 +29,12 @@ FROM students s
 JOIN programmes p
     ON s.programme_id = p.programme_id
 WHERE s.matric_number = 'MIVA/PG/2025/001';
+
+-- course lookup query--
+EXPLAIN ANALYZE
+SELECT
+    course_code,
+    course_title,
+    credit_units
+FROM courses
+WHERE course_code = 'MIT801';
