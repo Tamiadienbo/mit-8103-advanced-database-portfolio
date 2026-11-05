@@ -36,6 +36,22 @@ The student lookup used a sequential scan, while the course lookup used an index
 
 The measured execution times are observations from individual runs on a small dataset. They should not be interpreted as proof that one access method is universally faster.
 
+## 4.1 Enrolment Composite Index Test
+
+The third experiment examined the composite index `uq_student_course_session` on the enrolments table.
+
+The query filtered records using both `student_id` and `course_id`.
+
+- Execution method: Index Scan.
+- Index used: `uq_student_course_session`.
+- Rows returned: 1.
+- Execution time: 4.267 ms.
+- Planning time: 0.385 ms.
+
+The execution plan confirmed that PostgreSQL used the existing composite index to locate the matching enrolment.
+
+This demonstrates how a composite index can support queries that filter using its leading columns. No additional index was required for this test.
+
 ## 5. Limitations
 
 The database contains a small sample dataset. Consequently, the tests demonstrate query execution and index selection but do not establish performance improvements at larger data volumes.
