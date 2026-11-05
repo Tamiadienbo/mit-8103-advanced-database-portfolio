@@ -38,3 +38,16 @@ SELECT
     credit_units
 FROM courses
 WHERE course_code = 'MIT801';
+
+-- Test 3: Composite index on enrolments
+
+EXPLAIN ANALYZE
+SELECT
+    enrolment_id,
+    student_id,
+    course_id,
+    session_id,
+    semester
+FROM enrolments
+WHERE student_id = 1
+  AND course_id = 1;
