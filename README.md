@@ -1,4 +1,4 @@
-# MIT 8103 – Advanced Database Systems Portfolio
+# MIT 8103 – Advanced Database Systems
 
 ## Project Overview
 This repository contains the practical activities and documentation for the MIT 8103 Advanced Database Systems course.
