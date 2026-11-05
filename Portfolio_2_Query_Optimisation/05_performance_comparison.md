@@ -52,6 +52,33 @@ The execution plan confirmed that PostgreSQL used the existing composite index t
 
 This demonstrates how a composite index can support queries that filter using its leading columns. No additional index was required for this test.
 
+### Optimised Student Enrolment Query
+
+The optimised query retrieves course enrolment and academic result information for a specific student using their matriculation number. Unlike the baseline query, which retrieves records across all students, this query applies a WHERE filter to narrow the results to one student.
+
+The query returned two enrolment records successfully.
+
+**Execution plan observations:**
+
+- A sequential scan was used to locate the student record.
+- An index scan using `programmes_pkey` retrieved the student's programme.
+- A bitmap index scan using `uq_student_course_session` retrieved the student's enrolments.
+- A sequential scan was used on the courses table.
+- An index scan using `results_enrolment_id_key` retrieved the corresponding results.
+
+**Performance measurements:**
+
+| Metric | Result |
+|---|---:|
+| Rows returned | 2 |
+| Planning time | 1.409 ms |
+| Execution time | 0.301 ms |
+| Shared buffer hits | 13 |
+
+The execution plan demonstrates PostgreSQL's ability to combine sequential scans, bitmap index scans, index scans, and sorting operations when processing a query.
+
+The sequential scans on the students and courses tables are reasonable given the small sample dataset. The results demonstrate index utilisation but should not be interpreted as proof of improved performance at large scale.
+
 ## 5. Limitations
 
 The database contains a small sample dataset. Consequently, the tests demonstrate query execution and index selection but do not establish performance improvements at larger data volumes.
