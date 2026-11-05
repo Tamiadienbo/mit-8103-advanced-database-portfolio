@@ -6,7 +6,7 @@ This repository contains the practical activities and documentation for the MIT 
 The project uses a University Management Information System (UMIS) as its case study. It explores the design, implementation, optimisation, and management of a relational database, alongside advanced database concepts.
 
 ## Case Study
-A simulated university environment involving students, departments, programmes, lecturers, courses, enrolments, academic results, and payments.
+A simulated university environment involving faculties, departments, programmes, students, lecturers, courses, academic sessions, enrolments, and academic results.
 
 All sample records are fictional and created for academic purposes.
 
