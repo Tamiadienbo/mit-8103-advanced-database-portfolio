@@ -1,0 +1,32 @@
+
+{
+  "student_id": 1,
+  "matric_number": "MIVA/PG/2025/001",
+  "student": {
+    "first_name": "Chinedu",
+    "last_name": "Okoro",
+    "email": "chinedu.okoro@example.com"
+  },
+  "programme": {
+    "name": "Master of Information Technology",
+    "level": "Masters",
+    "department": "Information Technology"
+  },
+  "enrolments": [
+    {
+      "course_code": "MIT801",
+      "course_title": "Advanced Database Systems",
+      "semester": 1,
+      "status": "Completed",
+      "score": 85,
+      "grade": "A"
+    },
+    {
+      "course_code": "MIT802",
+      "course_title": "Information Systems Management",
+      "semester": 1,
+      "status": "Registered"
+    }
+  ],
+  "academic_session": "2025/2026"
+}
