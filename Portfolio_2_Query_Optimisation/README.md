@@ -89,4 +89,4 @@ It also demonstrated how query filters and existing indexes influence the execut
 
 ## 8. Evidence
 
-Screenshots of the SQL queries, execution plans, index tests, and query results are stored in the `Evidence` folder within this portfolio directory.
+Screenshots of the SQL queries, execution plans, index tests, and query results are stored in within this portfolio directory.
